@@ -78,9 +78,10 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
   .tabs button.active{background:var(--primary); color:#fff;}
 
   .layout{
-    display:grid; grid-template-columns:340px 1fr; gap:20px;
+    display:flex; flex-direction:column; gap:20px;
     width:100%; max-width:1080px;
   }
+  .preview{order:-1; width:100%;}
   @media (max-width:820px){
     .layout{grid-template-columns:1fr; gap:16px;}
     .preview{min-height:280px;}
@@ -100,7 +101,7 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
     .btns button{flex:1;}
   }
   .view{display:none;}
-  .view.active{display:grid;}
+  .view.active{display:flex; flex-direction:column;}
   .card{
     background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
     box-shadow:var(--shadow); padding:20px;
@@ -331,7 +332,7 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
   </section>
 </section>
 
-<footer>全部计算在浏览器本地完成，数据不会上传到任何服务器</footer>
+<footer>全部计算在浏览器本地完成，数据不会上传到任何服务器 · 部署到 GitHub 后可通过 GitHub Pages 访问</footer>
 
 <script>
 
